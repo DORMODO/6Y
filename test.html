@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Button</title>
+    <style>
+      body {
+        background-color: #f0f0f0; /* Light mode background color */
+        color: #333; /* Light mode text color */
+      }
+
+      .dark-mode {
+        background-color: #333; /* Dark mode background color */
+        color: #f0f0f0; /* Dark mode text color */
+      }
+
+      #dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="dark-mode-toggle">Dark Mode</button>
+    <div class="content">
+      <h1>Welcome to my website</h1>
+      <p>This is some sample content.</p>
+    </div>
+    <script>
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const content = document.querySelector(".content");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        content.classList.toggle("dark-mode");
+      });
+    </script>
+  </body>
+</html>
